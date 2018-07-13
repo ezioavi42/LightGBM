@@ -125,7 +125,7 @@ Core Parameters
 
 -  ``num_iterations`` :raw-html:`<a id="num_iterations" title="Permalink to this parameter" href="#num_iterations">&#x1F517;&#xFE0E;</a>`, default = ``100``, type = int, aliases: ``num_iteration``, ``num_tree``, ``num_trees``, ``num_round``, ``num_rounds``, ``num_boost_round``, ``n_estimators``, constraints: ``num_iterations >= 0``
 
-   -  number of boosting iterations
+   -  number of boosting iterations typo fix in rst file
 
    -  **Note**: for Python/R-package, **this parameter is ignored**, use ``num_boost_round`` (Python) or ``nrounds`` (R) input arguments of ``train`` and ``cv`` methods instead
 
@@ -170,6 +170,8 @@ Core Parameters
 -  ``device_type`` :raw-html:`<a id="device_type" title="Permalink to this parameter" href="#device_type">&#x1F517;&#xFE0E;</a>`, default = ``cpu``, type = enum, options: ``cpu``, ``gpu``, aliases: ``device``
 
    -  device for the tree learning, you can use GPU to achieve the faster learning
+
+  - new line description
 
    -  **Note**: it is recommended to use the smaller ``max_bin`` (e.g. 63) to get the better speed up
 
@@ -876,7 +878,7 @@ LightGBM supports weighted training. It uses an additional file to store weight 
     0.8
     ...
 
-It means the weight of the first data row is ``1.0``, second is ``0.5``, and so on.
+It means the weight of the first data row is ``1.0``, second is ``0.5``, and so on. Any modifications out of parameter list are allowed and should not be catched by diff.
 The weight file corresponds with data file line by line, and has per weight per line.
 
 And if the name of data file is ``train.txt``, the weight file should be named as ``train.txt.weight`` and placed in the same folder as the data file.
