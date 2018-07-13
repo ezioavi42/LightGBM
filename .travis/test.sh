@@ -24,7 +24,7 @@ if [[ $TASK == "check-docs" ]]; then
     # build docs and check them for broken links
     make html || exit -1
     find ./_build/html/ -type f -name '*.html' -exec \
-    sed -i -e 's;\(\.\/[^.]*\.\)rst\([^[:space:]]*\);\1html\2;g' {} \;  # emulate js function
+    sed -i'.bak' -e 's;\(\.\/[^.]*\.\)rst\([^[:space:]]*\);\1html\2;g' {} \;  # emulate js function
 #    html5validator --root ./_build/html/ || exit -1
     if [[ $TRAVIS_OS_NAME != "osx" ]]; then
         sudo apt-get install linkchecker
