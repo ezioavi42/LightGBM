@@ -36,8 +36,6 @@ matrix:
       env: TASK=if-else
     - os: osx
       env: TASK=pylint
-    - os: osx
-      env: TASK=check-docs
 
 before_install:
   - test -n $CC  && unset CC
