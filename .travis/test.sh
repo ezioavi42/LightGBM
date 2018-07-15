@@ -49,7 +49,7 @@ if [[ $TASK == "if-else" ]]; then
 fi
 
 conda install numpy nose scipy scikit-learn pandas matplotlib python-graphviz pytest
-conda install "matplotlib=2.2.2=py${PYTHON_VERSION:0:1}${PYTHON_VERSION:1:1}ha7267d0_0"
+conda install "matplotlib=2.2.2=py${PYTHON_VERSION:0:1}${PYTHON_VERSION:2:1}ha7267d0_0"
 
 if [[ $TASK == "sdist" ]]; then
     cd $TRAVIS_BUILD_DIR/python-package && python setup.py sdist || exit -1
