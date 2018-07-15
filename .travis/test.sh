@@ -49,7 +49,7 @@ if [[ $TASK == "if-else" ]]; then
 fi
 
 conda install numpy nose scipy scikit-learn pandas matplotlib python-graphviz pytest
-conda install "cairo=1.14.12-hab642c4_1"
+conda install "cairo=1.14.12=hab642c4_1"
 
 if [[ $TASK == "sdist" ]]; then
     cd $TRAVIS_BUILD_DIR/python-package && python setup.py sdist || exit -1
